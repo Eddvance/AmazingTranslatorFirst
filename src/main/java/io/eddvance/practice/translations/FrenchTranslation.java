@@ -5,41 +5,37 @@ import java.util.List;
 
 public class FrenchTranslation {
 
-
-    List<Object[]> frenchTranslations = new ArrayList<>();
-
-    public FrenchTranslation() {
-
-        frenchTranslations.add(new Object[]{1, "un", "Francais"});
-        frenchTranslations.add(new Object[]{2, "deux", "Francais"});
-        frenchTranslations.add(new Object[]{3, "trois", "Francais"});
-        frenchTranslations.add(new Object[]{4, "quatre", "Francais"});
-        frenchTranslations.add(new Object[]{5, "cinq", "Francais"});
-        frenchTranslations.add(new Object[]{6, "six", "Francais"});
-        frenchTranslations.add(new Object[]{7, "sept", "Francais"});
-        frenchTranslations.add(new Object[]{8, "huit", "Francais"});
-        frenchTranslations.add(new Object[]{9, "neuf", "Francais"});
-        frenchTranslations.add(new Object[]{10, "dix", "Francais"});
-        frenchTranslations.add(new Object[]{11, "onze", "Francais"});
-        frenchTranslations.add(new Object[]{12, "douze", "Francais"});
-        frenchTranslations.add(new Object[]{13, "treize", "Francais"});
-        frenchTranslations.add(new Object[]{14, "quatorze", "Francais"});
-        frenchTranslations.add(new Object[]{15, "quinze", "Francais"});
-        frenchTranslations.add(new Object[]{16, "seize", "Francais"});
-        frenchTranslations.add(new Object[]{17, "dix-sept", "Francais"});
-        frenchTranslations.add(new Object[]{18, "dix-huit", "Francais"});
-        frenchTranslations.add(new Object[]{19, "dix-neuf", "Francais"});
-        frenchTranslations.add(new Object[]{20, "vingt", "Francais"});
-        frenchTranslations.add(new Object[]{21, "vingt-et-un", "Francais"});
-        frenchTranslations.add(new Object[]{22, "vingt-deux", "Francais"});
-        frenchTranslations.add(new Object[]{23, "vingt-trois", "Francais"});
-        frenchTranslations.add(new Object[]{24, "vingt-quatre", "Francais"});
-        frenchTranslations.add(new Object[]{25, "vingt-cinq", "Francais"});
-        frenchTranslations.add(new Object[]{26, "vingt-six", "Francais"});
-        frenchTranslations.add(new Object[]{27, "vingt-sept", "Francais"});
-        frenchTranslations.add(new Object[]{28, "vingt-huit", "Francais"});
-        frenchTranslations.add(new Object[]{29, "vingt-neuf", "Francais"});
-        frenchTranslations.add(new Object[]{30, "trente", "Francais"});
+    public static void frenchTranslation() {
+        List<String> frenchTranslations = new ArrayList<String>();
+        frenchTranslations.add("Un");
+        frenchTranslations.add("Deux");
+        frenchTranslations.add("Trois");
+        frenchTranslations.add("Quatre");
+        frenchTranslations.add("Cinq");
+        frenchTranslations.add("Six");
+        frenchTranslations.add("Sept");
+        frenchTranslations.add("Huit");
+        frenchTranslations.add("Neuf");
+        frenchTranslations.add("Dix");
+        frenchTranslations.add("Onze");
+        frenchTranslations.add("Douze");
+        frenchTranslations.add("Treize");
+        frenchTranslations.add("Quatorze");
+        frenchTranslations.add("Quinze");
+        frenchTranslations.add("Seize");
+        frenchTranslations.add("Dix-sept");
+        frenchTranslations.add("Dix-huit");
+        frenchTranslations.add("Dix-neuf");
+        frenchTranslations.add("Vingt");
+        frenchTranslations.add("Vingt et un");
+        frenchTranslations.add("Vingt-deux");
+        frenchTranslations.add("Vingt-trois");
+        frenchTranslations.add("Vingt-quatre");
+        frenchTranslations.add("Vingt-cinq");
+        frenchTranslations.add("Vingt-six");
+        frenchTranslations.add("Vingt-sept");
+        frenchTranslations.add("Vingt-huit");
+        frenchTranslations.add("Vingt-neuf");
+        frenchTranslations.add("Trente");
     }
-
 }

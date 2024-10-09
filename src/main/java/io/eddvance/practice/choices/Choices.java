@@ -1,19 +1,29 @@
 package io.eddvance.practice.choices;
 
+import io.eddvance.practice.translations.FrenchTranslation;
+
 import java.util.Scanner;
+import java.util.logging.Logger;
+
 
 public class Choices {
 
-    static Scanner scanner;
-    public static Integer numberAsked = null;
-    public int numberChoice() {
-        System.out.println("What is the numberAsked to translate ?");
+    Logger logger = Logger.getLogger(getClass().getName());
+    Scanner scanner;
+
+    public Choices() {
+        FrenchTranslation frenchTranslation = new FrenchTranslation();
+    }
+
+    private int numberChoice() {
+        logger.info("What is the numberAsked to translate ?");
         scanner = new Scanner(System.in);
         String numberAsString = scanner.nextLine();
-        
+        Integer numberAsked = null;
+
         try {
             numberAsked = Integer.parseInt(numberAsString);
-            System.out.println(numberAsked);
+            logger.info(numberAsked);
         } catch (NumberFormatException nfe) {
             System.out.println("The numberAsked had to be numeric");
             System.exit(0);//a suivre
@@ -21,24 +31,29 @@ public class Choices {
         return numberAsked;
     }
 
+
     public int translationChoice() {
-        System.out.println("What is language (1-French, 2-German)?");
+        logger.info("What is language (1-French, 2-German)?");
         String optionAsString = scanner.nextLine();
         Integer option = null;
-
         try {
             option = Integer.parseInt(optionAsString);
-            System.out.println(option);
+            logger.info(option);
         } catch (NumberFormatException nfe) {
-            System.out.println("The option had to be numeric");
+            logger.info("The option had to be numeric");
             System.exit(0);
-                    /*public void //...Check that the option is 1 or 2
-        if (option == 1) {
-            //String translated = frenchTranslations.get(number - 1);
-            //System.out.println(translated);
-        }
-     */
         }
         return option;
     }
+
+    private String getFrenchTranslation(Integer integer) {
+        String translated=frenchTranslations.get(n-1);
+        logger.info(translated);
+        return translated;
+    }
+
 }
+ /*public void //...Check that the option is 1 or 2
+        if (option == 1) {
+            //String translated = frenchTranslations.get(number - 1);
+            //System.out.println(translated);
