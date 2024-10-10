@@ -13,6 +13,6 @@ public class Main {
         Choices choices = new Choices();
         choices.numberChoice();
         choices.translationChoice();
-        SearchAndReturn.getFrenchTranslation(numberAsked);
+        //SearchAndReturn.getFrenchTranslation(numberAsked);
     }
 }

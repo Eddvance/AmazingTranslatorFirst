@@ -5,37 +5,43 @@ import java.util.List;
 
 public class FrenchTranslation {
 
-    public static void frenchTranslation() {
-        List<String> frenchTranslations = new ArrayList<String>();
-        frenchTranslations.add("Un");
-        frenchTranslations.add("Deux");
-        frenchTranslations.add("Trois");
-        frenchTranslations.add("Quatre");
-        frenchTranslations.add("Cinq");
-        frenchTranslations.add("Six");
-        frenchTranslations.add("Sept");
-        frenchTranslations.add("Huit");
-        frenchTranslations.add("Neuf");
-        frenchTranslations.add("Dix");
-        frenchTranslations.add("Onze");
-        frenchTranslations.add("Douze");
-        frenchTranslations.add("Treize");
-        frenchTranslations.add("Quatorze");
-        frenchTranslations.add("Quinze");
-        frenchTranslations.add("Seize");
-        frenchTranslations.add("Dix-sept");
-        frenchTranslations.add("Dix-huit");
-        frenchTranslations.add("Dix-neuf");
-        frenchTranslations.add("Vingt");
-        frenchTranslations.add("Vingt et un");
-        frenchTranslations.add("Vingt-deux");
-        frenchTranslations.add("Vingt-trois");
-        frenchTranslations.add("Vingt-quatre");
-        frenchTranslations.add("Vingt-cinq");
-        frenchTranslations.add("Vingt-six");
-        frenchTranslations.add("Vingt-sept");
-        frenchTranslations.add("Vingt-huit");
-        frenchTranslations.add("Vingt-neuf");
-        frenchTranslations.add("Trente");
+    private final List<String> frenchTranslations;
+
+    public FrenchTranslation() {
+        this.frenchTranslations = new ArrayList<>();
+        this.frenchTranslations.add("Un");
+        this.frenchTranslations.add("Deux");
+        this.frenchTranslations.add("Trois");
+        this.frenchTranslations.add("Quatre");
+        this.frenchTranslations.add("Cinq");
+        this.frenchTranslations.add("Six");
+        this.frenchTranslations.add("Sept");
+        this.frenchTranslations.add("Huit");
+        this.frenchTranslations.add("Neuf");
+        this.frenchTranslations.add("Dix");
+        this.frenchTranslations.add("Onze");
+        this.frenchTranslations.add("Douze");
+        this.frenchTranslations.add("Treize");
+        this.frenchTranslations.add("Quatorze");
+        this.frenchTranslations.add("Quinze");
+        this.frenchTranslations.add("Seize");
+        this.frenchTranslations.add("Dix-sept");
+        this.frenchTranslations.add("Dix-huit");
+        this.frenchTranslations.add("Dix-neuf");
+        this.frenchTranslations.add("Vingt");
+        this.frenchTranslations.add("Vingt et un");
+        this.frenchTranslations.add("Vingt-deux");
+        this.frenchTranslations.add("Vingt-trois");
+        this.frenchTranslations.add("Vingt-quatre");
+        this.frenchTranslations.add("Vingt-cinq");
+        this.frenchTranslations.add("Vingt-six");
+        this.frenchTranslations.add("Vingt-sept");
+        this.frenchTranslations.add("Vingt-huit");
+        this.frenchTranslations.add("Vingt-neuf");
+        this.frenchTranslations.add("Trente");
+    }
+
+    public List<String> getFrenchTranslations() {
+        return this.frenchTranslations;
     }
 }
