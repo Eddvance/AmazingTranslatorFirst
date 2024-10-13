@@ -5,43 +5,41 @@ import java.util.List;
 
 public class GermanTranslation {
 
-    private final List<String> germanTranslations;
+    public static final List<String> germanTranslations = new ArrayList<>();
 
-    public GermanTranslation() {
-        this.germanTranslations = new ArrayList<>();
-        this.germanTranslations.add("Eins");
-        this.germanTranslations.add("Zwei");
-        this.germanTranslations.add("Drei");
-        this.germanTranslations.add("Vier");
-        this.germanTranslations.add("Fünf");
-        this.germanTranslations.add("Sechs");
-        this.germanTranslations.add("Sieben");
-        this.germanTranslations.add("Acht");
-        this.germanTranslations.add("Neun");
-        this.germanTranslations.add("Zehn");
-        this.germanTranslations.add("Elf");
-        this.germanTranslations.add("Zwölf");
-        this.germanTranslations.add("Dreizehn");
-        this.germanTranslations.add("Vierzehn");
-        this.germanTranslations.add("Fünfzehn");
-        this.germanTranslations.add("Sechzehn");
-        this.germanTranslations.add("Siebzehn");
-        this.germanTranslations.add("Achtzehn");
-        this.germanTranslations.add("Neunzehn");
-        this.germanTranslations.add("Zwanzig");
-        this.germanTranslations.add("Einundzwanzig");
-        this.germanTranslations.add("Zweiundzwanzig");
-        this.germanTranslations.add("Dreiundzwanzig");
-        this.germanTranslations.add("Vierundzwanzig");
-        this.germanTranslations.add("Fünfundzwanzig");
-        this.germanTranslations.add("Sechsundzwanzig");
-        this.germanTranslations.add("Siebenundzwanzig");
-        this.germanTranslations.add("Achtundzwanzig");
-        this.germanTranslations.add("Neunundzwanzig");
-        this.germanTranslations.add("Dreißig");
-    }
+    private void GermanTranslation() {
 
-    public List<String> getGermanTranslations() {
-        return this.germanTranslations;
+        germanTranslations.add("Eins");
+        germanTranslations.add("Zwei");
+        germanTranslations.add("Drei");
+        germanTranslations.add("Vier");
+        germanTranslations.add("Fünf");
+        germanTranslations.add("Sechs");
+        germanTranslations.add("Sieben");
+        germanTranslations.add("Acht");
+        germanTranslations.add("Neun");
+        germanTranslations.add("Zehn");
+        germanTranslations.add("Elf");
+        germanTranslations.add("Zwölf");
+        germanTranslations.add("Dreizehn");
+        germanTranslations.add("Vierzehn");
+        germanTranslations.add("Fünfzehn");
+        germanTranslations.add("Sechzehn");
+        germanTranslations.add("Siebzehn");
+        germanTranslations.add("Achtzehn");
+        germanTranslations.add("Neunzehn");
+        germanTranslations.add("Zwanzig");
+        germanTranslations.add("Einundzwanzig");
+        germanTranslations.add("Zweiundzwanzig");
+        germanTranslations.add("Dreiundzwanzig");
+        germanTranslations.add("Vierundzwanzig");
+        germanTranslations.add("Fünfundzwanzig");
+        germanTranslations.add("Sechsundzwanzig");
+        germanTranslations.add("Siebenundzwanzig");
+        germanTranslations.add("Achtundzwanzig");
+        germanTranslations.add("Neunundzwanzig");
+        germanTranslations.add("Dreißig");
+
+        int size= germanTranslations.size();
     }
 }

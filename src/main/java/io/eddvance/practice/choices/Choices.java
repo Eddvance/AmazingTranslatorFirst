@@ -9,12 +9,12 @@ public class Choices {
 
     private final Logger logger = Logger.getLogger(getClass().getName());
     private Scanner scanner;
+    Integer numberAsked = null;
 
     public int numberChoice() {
         logger.info("What is the numberAsked to translate ?");
         scanner = new Scanner(System.in);
         String numberAsString = scanner.nextLine();
-        Integer numberAsked = null;
 
         try {
             numberAsked = Integer.parseInt(numberAsString);
