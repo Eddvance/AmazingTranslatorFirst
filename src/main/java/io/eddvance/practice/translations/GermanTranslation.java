@@ -5,9 +5,10 @@ import java.util.List;
 
 public class GermanTranslation {
 
-    public static final List<String> germanTranslations = new ArrayList<>();
+    private static final List<String> germanTranslations = new ArrayList<>();
+    public static List<String> getGermanTranslations() {return germanTranslations;}
 
-    private void GermanTranslation() {
+    public void GermanTranslation() {
 
         germanTranslations.add("Eins");
         germanTranslations.add("Zwei");

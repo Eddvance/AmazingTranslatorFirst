@@ -5,11 +5,10 @@ import java.util.List;
 
 public class FrenchTranslation {
 
-    public static final List<String> frenchTranslations = new ArrayList<String>();
+    private static final List<String> frenchTranslations = new ArrayList<>();
+    public static List<String> getFrenchTranslations() {return frenchTranslations;}
 
-
-
-    private void frenchTranslation() {
+    public void frenchTranslation() {
 
         frenchTranslations.add("Un");
         frenchTranslations.add("Deux");

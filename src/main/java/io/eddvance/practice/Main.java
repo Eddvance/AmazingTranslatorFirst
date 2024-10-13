@@ -9,10 +9,9 @@ public class Main {
     public static void main(String[] args) {
 
         Choices choices = new Choices();
+        SearchAndReturn searchAndReturn = new SearchAndReturn();
         choices.numberChoice();
         choices.translationChoice();
-
-        SearchAndReturn searchAndReturn = new SearchAndReturn();
-        SearchAndReturn.getTranslation(choices.numberChoice());
+        searchAndReturn.getTranslation(choices.numberChoice());
     }
 }

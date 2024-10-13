@@ -12,7 +12,7 @@ public class Choices {
     Integer numberAsked = null;
 
     public int numberChoice() {
-        logger.info("What is the numberAsked to translate ?");
+        logger.info("What is the number to translate ?");
         scanner = new Scanner(System.in);
         String numberAsString = scanner.nextLine();
 
