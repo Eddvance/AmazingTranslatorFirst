@@ -1,19 +1,21 @@
 package io.eddvance.practice.choices;
 
-import io.eddvance.practice.translations.FrenchTranslation;
-
 import java.util.Scanner;
 import java.util.logging.Logger;
 
 public class Choices {
 
     private final Logger logger = Logger.getLogger(getClass().getName());
-    private Scanner scanner;
-    Integer numberAsked = null;
+    private Scanner scanner= new Scanner(System.in);
+
+    public Integer getNumberAsked() {
+        return numberAsked;
+    }
+
+    private Integer numberAsked;
 
     public int numberChoice() {
         logger.info("What is the number to translate ?");
-        scanner = new Scanner(System.in);
         String numberAsString = scanner.nextLine();
 
         try {
@@ -36,7 +38,6 @@ public class Choices {
             logger.info(""+option);
         } catch (NumberFormatException nfe) {
             logger.severe("The option had to be numeric");
-            System.exit(0);
         }
         return option;
     }

@@ -11,14 +11,20 @@ public class SearchAndReturn {
 
         Logger logger = Logger.getLogger(getClass().getName());
         Choices choices = new Choices();
-        number = choices.numberAsked;
+
+        if (number == null) {
+            logger.severe("Le numéro fourni est nul !");
+            return;
+        }
         int choix = choices.translationChoice();
         String translation = null;
 
         if (choix == 1) {
             if (number > 0 && number <= getFrenchTranslations().size()) {
                 translation = getFrenchTranslations().get(number - 1);
-                logger.info("Le nombre " + number + " en français est : " + translation);
+                logger.severe("Le nombre " + number + " en français est : " + getFrenchTranslations().size());
+            } else {
+                logger.info("Numero invalide, entrez un nombre entre 1 et 30");
             }
 
         } else if
@@ -26,19 +32,9 @@ public class SearchAndReturn {
             if (number > 0 && number <= getGermanTranslations().size()) {
                 translation = getGermanTranslations().get(number - 1);
                 logger.info("Le nombre " + number + " en allemand est : " + translation);
+            } else {
+                logger.info("Numéro invalide, entrez un nombre entre 1 et " + getGermanTranslations().size());
             }
         }
     }
 }
-
-/*
-logger.info("Numéro invalide, entrez un nombre entre 1 et " + frenchTranslations.size());
-            return null;
- */
-
-/*
-else {
-                logger.info("Numéro invalide, entrez un nombre entre 1 et " + frenchTranslations.size());
-                //return null;
-            }
- */

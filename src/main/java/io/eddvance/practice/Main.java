@@ -8,10 +8,10 @@ import io.eddvance.practice.choices.SearchAndReturn;
 public class Main {
     public static void main(String[] args) {
 
-        Choices choices = new Choices();
         SearchAndReturn searchAndReturn = new SearchAndReturn();
-        choices.numberChoice();
+        Choices choices = new Choices();
         choices.translationChoice();
-        searchAndReturn.getTranslation(choices.numberChoice());
+        choices.numberChoice();
+        searchAndReturn.getTranslation(choices.translationChoice());
     }
 }
