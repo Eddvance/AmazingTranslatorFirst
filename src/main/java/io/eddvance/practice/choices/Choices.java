@@ -8,11 +8,24 @@ public class Choices {
     private final Logger logger = Logger.getLogger(getClass().getName());
     private Scanner scanner= new Scanner(System.in);
 
-    public Integer getNumberAsked() {
+    public int getNumberAsked() {
         return numberAsked;
     }
 
-    private Integer numberAsked;
+    public void setNumberAsked(int numberAsked) {
+        this.numberAsked = numberAsked;
+    }
+
+    public int getLanguageSelection() {
+        return languageSelection;
+    }
+
+    public void setLanguageSelection(int languageSelection) {
+        this.languageSelection = languageSelection;
+    }
+
+    private int numberAsked;
+    private int languageSelection;
 
     public int numberChoice() {
         logger.info("What is the number to translate ?");
@@ -23,7 +36,7 @@ public class Choices {
             logger.info(""+numberAsked);
         } catch (NumberFormatException nfe) {
             logger.severe("The numberAsked had to be numeric");
-            System.exit(0);//a suivre
+            System.exit(0);
         }
         return numberAsked;
     }
@@ -31,14 +44,14 @@ public class Choices {
     public int translationChoice() {
         logger.info("What is language (1-French, 2-German)?");
         String optionAsString = scanner.nextLine();
-        Integer option = null;
+
 
         try {
-            option = Integer.parseInt(optionAsString);
-            logger.info(""+option);
+            languageSelection = Integer.parseInt(optionAsString);
+            logger.info(""+languageSelection);
         } catch (NumberFormatException nfe) {
-            logger.severe("The option had to be numeric");
+            logger.severe("The languageSelection had to be numeric");
         }
-        return option;
+        return languageSelection;
     }
 }
