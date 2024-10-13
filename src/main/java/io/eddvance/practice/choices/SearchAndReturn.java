@@ -10,9 +10,9 @@ import static io.eddvance.practice.translations.GermanTranslation.germanTranslat
 
 public class SearchAndReturn {
 
-    public String getTranslation(Integer number) {
+    public static String getTranslation(Integer number) {
 
-        Logger logger = Logger.getLogger(getClass().getName());
+        Logger logger = Logger.getLogger(SearchAndReturn.class.getName());
         FrenchTranslation frenchTranslation = new FrenchTranslation();
         GermanTranslation germanTranslation = new GermanTranslation();
         Choices choices = new Choices();
@@ -24,19 +24,19 @@ public class SearchAndReturn {
                 logger.info("Le nombre " + number + " en français est : " + translation);
                 return translation;
             }
+            logger.info("Numéro invalide, entrez un nombre entre 1 et " + frenchTranslations.size());
+            return null;
+        } else if (number == 2) {
+            if (number > 0 && number <= germanTranslations.size()) {
+                String translation = frenchTranslations.get(number - 1);
+                logger.info("Le nombre " + number + " en allemand est : " + translation);
+                return translation;
+
+            } else {
                 logger.info("Numéro invalide, entrez un nombre entre 1 et " + frenchTranslations.size());
                 return null;
-
-            } else{
-                if (number > 0 && number <= germanTranslations.size()) {
-                    String translation = frenchTranslations.get(number - 1); // -1 car les listes commencent à l'index 0
-                    logger.info("Le nombre " + number + " en allemand est : " + translation);
-                    return translation;
-
-                } else {
-                    logger.info("Numéro invalide, entrez un nombre entre 1 et " + frenchTranslations.size());
-                    return null;
-                }
             }
         }
+        return null;
     }
+}
