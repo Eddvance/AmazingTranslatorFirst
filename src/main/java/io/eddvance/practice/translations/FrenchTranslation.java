@@ -8,7 +8,6 @@ public class FrenchTranslation {
     public static final List<String> frenchTranslations = new ArrayList<String>();
 
 
-
     private void frenchTranslation() {
 
         frenchTranslations.add("Un");

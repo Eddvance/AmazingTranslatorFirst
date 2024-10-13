@@ -11,8 +11,7 @@ public class Main {
         Choices choices = new Choices();
         choices.numberChoice();
         choices.translationChoice();
-
         SearchAndReturn searchAndReturn = new SearchAndReturn();
-        SearchAndReturn.getTranslation(choices.numberChoice());
+        searchAndReturn.getTranslation(choices.numberChoice());
     }
 }
