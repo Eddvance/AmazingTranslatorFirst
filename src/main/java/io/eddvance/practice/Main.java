@@ -12,14 +12,16 @@ public class Main {
 
         FrenchTranslation frenchTranslation = new FrenchTranslation();
         frenchTranslation.frenchTranslation();
-        GermanTranslation germanTranslation =new GermanTranslation();
+        GermanTranslation germanTranslation = new GermanTranslation();
         germanTranslation.germanTranslation();
 
         SearchAndReturn searchAndReturn = new SearchAndReturn();
         Choices choices = new Choices();
 
-        choices.numberChoice();
-        choices.translationChoice();
-        searchAndReturn.getTranslation(choices.translationChoice());
+        int number = choices.numberChoice();
+        int languageSelection = choices.translationChoice();
+
+        String translation = searchAndReturn.getTranslation(number, languageSelection);
+        System.out.println("Translation: " + translation);
     }
 }

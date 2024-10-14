@@ -59,14 +59,12 @@ public class Choices {
                     inputValid = true;  // Sort de la boucle si la saisie est correcte
                 } else {
                     System.out.println("Please enter a valid option: 1 for French, 2 for German.");
-                    //logger.info(""+languageSelection);
-                    System.out.println(languageSelection);
                 }
             } catch (NumberFormatException nfe) {
                 // logger.severe("The languageSelection had to be numeric");
                 System.out.println("The languageSelection had to be numeric");
-                return translationChoice();
             }
+
         }
         return languageSelection;
     }
