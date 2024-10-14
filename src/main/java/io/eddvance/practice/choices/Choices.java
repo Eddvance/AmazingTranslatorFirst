@@ -34,8 +34,6 @@ public class Choices {
 
         try {
             numberAsked = Integer.parseInt(numberAsString);
-            //logger.info(""+numberAsked);
-            System.out.println(numberAsked);
         } catch (NumberFormatException nfe) {
             //logger.severe("The numberAsked had to be numeric");
             System.out.println("The numberAsked had to be numeric");
@@ -64,7 +62,6 @@ public class Choices {
                 // logger.severe("The languageSelection had to be numeric");
                 System.out.println("The languageSelection had to be numeric");
             }
-
         }
         return languageSelection;
     }

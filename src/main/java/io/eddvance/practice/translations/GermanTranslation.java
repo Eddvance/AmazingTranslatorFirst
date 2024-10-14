@@ -5,8 +5,7 @@ import java.util.List;
 
 public class GermanTranslation {
 
-    private static final List<String> germanTranslations = new ArrayList<>();
-    public static List<String> getGermanTranslations() {return germanTranslations;}
+    public static final List<String> germanTranslations = new ArrayList<>();
 
     public void germanTranslation() {
 
