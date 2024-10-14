@@ -6,7 +6,7 @@ import java.util.logging.Logger;
 public class Choices {
 
     private final Logger logger = Logger.getLogger(getClass().getName());
-    private Scanner scanner= new Scanner(System.in);
+    private final Scanner scanner= new Scanner(System.in);
 
     public int getNumberAsked() {
         return numberAsked;
@@ -44,7 +44,6 @@ public class Choices {
     public int translationChoice() {
         logger.info("What is language (1-French, 2-German)?");
         String optionAsString = scanner.nextLine();
-
 
         try {
             languageSelection = Integer.parseInt(optionAsString);
