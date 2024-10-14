@@ -14,10 +14,12 @@ public class Main {
         frenchTranslation.frenchTranslation();
         GermanTranslation germanTranslation =new GermanTranslation();
         germanTranslation.germanTranslation();
+
         SearchAndReturn searchAndReturn = new SearchAndReturn();
         Choices choices = new Choices();
-        choices.translationChoice();
+
         choices.numberChoice();
+        choices.translationChoice();
         searchAndReturn.getTranslation(choices.translationChoice());
     }
 }
