@@ -8,7 +8,7 @@ public class GermanTranslation {
     private static final List<String> germanTranslations = new ArrayList<>();
     public static List<String> getGermanTranslations() {return germanTranslations;}
 
-    public void GermanTranslation() {
+    public void germanTranslation() {
 
         germanTranslations.add("Eins");
         germanTranslations.add("Zwei");
@@ -41,6 +41,5 @@ public class GermanTranslation {
         germanTranslations.add("Neunundzwanzig");
         germanTranslations.add("Dreißig");
 
-        int size= germanTranslations.size();
     }
 }

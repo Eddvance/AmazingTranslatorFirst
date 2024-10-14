@@ -20,6 +20,7 @@ public class SearchAndReturn {
         String translation = null;
 
         if (choix == 1) {
+            System.out.println(getFrenchTranslations().size());
             if (number > 0 && number <= getFrenchTranslations().size()) {
                 translation = getFrenchTranslations().get(number - 1);
                 logger.severe("Le nombre " + number + " en français est : " + getFrenchTranslations().size());

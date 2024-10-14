@@ -41,6 +41,5 @@ public class FrenchTranslation {
         frenchTranslations.add("Vingt-neuf");
         frenchTranslations.add("Trente");
 
-        int size = frenchTranslations.size();
     }
 }
