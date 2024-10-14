@@ -6,7 +6,10 @@ import java.util.List;
 public class FrenchTranslation {
 
     private static final List<String> frenchTranslations = new ArrayList<>();
-    public static List<String> getFrenchTranslations() {return frenchTranslations;}
+
+    public static List<String> getFrenchTranslations() {
+        return frenchTranslations;
+    }
 
     public void frenchTranslation() {
 
