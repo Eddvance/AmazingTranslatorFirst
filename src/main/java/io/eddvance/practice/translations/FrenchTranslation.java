@@ -5,7 +5,8 @@ import java.util.List;
 
 public class FrenchTranslation {
 
-    public static final List<String> frenchTranslations = new ArrayList<>();
+    private static final List<String> frenchTranslations = new ArrayList<>();
+    public static List<String> getFrenchTranslations() {return frenchTranslations;}
 
     public void frenchTranslation() {
 
