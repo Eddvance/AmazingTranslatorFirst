@@ -1,7 +1,7 @@
 package io.eddvance.practice;
 
-import io.eddvance.practice.choices.Choices;
-import io.eddvance.practice.choices.SearchAndReturn;
+import io.eddvance.practice.applicatif.Choices;
+import io.eddvance.practice.applicatif.SearchAndReturn;
 import io.eddvance.practice.translations.FrenchTranslation;
 import io.eddvance.practice.translations.GermanTranslation;
 

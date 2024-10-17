@@ -1,14 +1,28 @@
-package io.eddvance.practice.choices;
+package io.eddvance.practice.applicatif;
 
 import java.util.Scanner;
 import java.util.logging.Logger;
 
 public class Choices {
 
+    private InputReader inputReader;
     private final Logger logger = Logger.getLogger(getClass().getName());
     private final Scanner scanner = new Scanner(System.in);
+    private Scanner mockScanner;
     private int numberAsked;
     private int languageSelection;
+
+    public Choices(InputReader inputReader) {
+        this.inputReader = inputReader;
+    }
+
+    public Choices() {
+        this.mockScanner = null;
+    }
+
+    public Choices(Scanner mockScanner) {
+        this.mockScanner = mockScanner;
+    }
 
     public int getNumberAsked() {
         return numberAsked;
@@ -26,10 +40,11 @@ public class Choices {
         this.languageSelection = languageSelection;
     }
 
+    /////////////////////////////////
     public int numberChoice() {
 
         logger.info("What is the number to translate ?");
-        String numberAsString = scanner.nextLine();
+        String numberAsString = inputReader.readLine();
 
         try {
             numberAsked = Integer.parseInt(numberAsString);
@@ -39,7 +54,7 @@ public class Choices {
         }
         return numberAsked;
     }
-
+/////////////////////////////////
 
     public int translationChoice() {
 
@@ -51,7 +66,7 @@ public class Choices {
             try {
                 languageSelection = Integer.parseInt(optionAsString);
                 if (languageSelection == 1 || languageSelection == 2) {
-                    inputValid = true;  // Sort de la boucle si la saisie est correcte
+                    inputValid = true;
                 } else {
                     logger.severe("Please enter a valid option: 1 for French, 2 for German.");
                 }

@@ -1,4 +1,4 @@
-package io.eddvance.practice.choices;
+package io.eddvance.practice.applicatif;
 
 import java.util.logging.Logger;
 
