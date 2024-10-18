@@ -7,21 +7,18 @@ public class Choices {
 
     private InputReader inputReader;
     private final Logger logger = Logger.getLogger(getClass().getName());
-    private final Scanner scanner = new Scanner(System.in);
+    private Scanner scanner = new Scanner(System.in);
     private Scanner mockScanner;
     private int numberAsked;
     private int languageSelection;
 
-    public Choices(InputReader inputReader) {
-        this.inputReader = inputReader;
+    public Choices(InputReader inputReader, Scanner scanner) {
+        this.inputReader = inputReader != null ? inputReader : new InputReader();
+        this.scanner = scanner != null ? scanner : new Scanner(System.in);
     }
 
     public Choices() {
-        this.mockScanner = null;
-    }
-
-    public Choices(Scanner mockScanner) {
-        this.mockScanner = mockScanner;
+        this(new InputReader(), new Scanner(System.in));
     }
 
     public int getNumberAsked() {

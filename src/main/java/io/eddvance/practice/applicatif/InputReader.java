@@ -3,10 +3,10 @@ package io.eddvance.practice.applicatif;
 import java.util.Scanner;
 
 public class InputReader {
-    private Scanner scanner;
+    private final Scanner scanner;
 
-    public InputReader(Scanner scanner) {
-        this.scanner = scanner;
+    public InputReader() {
+        this.scanner = new Scanner(System.in);
     }
 
     public String readLine() {
