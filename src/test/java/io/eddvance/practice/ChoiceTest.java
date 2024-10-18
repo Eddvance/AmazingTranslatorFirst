@@ -10,7 +10,7 @@ import static org.junit.jupiter.api.Assertions.assertEquals;
 
 class ChoiceTest {
 
-    private Choices choices;  // Classe qui contient la méthode translationChoice()
+    private Choices choices;
     //private Scanner mockScanner;
     private InputReader mockInputReader;
 
@@ -46,10 +46,9 @@ class ChoiceTest {
 
     @Test
     void testInvalidInputThenValid() {
-        // Simuler une entrée invalide puis une entrée valide "2"
         Mockito.when(mockInputReader.readLine())
-                .thenReturn("abc")  // Entrée invalide
-                .thenReturn("2");   // Entrée valide
+                .thenReturn("abc")
+                .thenReturn("2");
 
         // Tester que la méthode finit par choisir "2" après une entrée invalide
         int result = choices.translationChoice();

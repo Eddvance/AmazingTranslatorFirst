@@ -21,6 +21,9 @@ public class Choices {
         this(new InputReader(), new Scanner(System.in));
     }
 
+    public Choices(InputReader mockInputReader) {
+    }
+
     public int getNumberAsked() {
         return numberAsked;
     }
