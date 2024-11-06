@@ -3,30 +3,21 @@ package io.eddvance.practice.applicatif;
 import java.util.Scanner;
 import java.util.logging.Logger;
 
-public class Choices {
+public class TranslationToChoice {
 
     private final InputReader inputReader;
     private final Logger logger = Logger.getLogger(getClass().getName());
     private Scanner scanner = new Scanner(System.in);
     private Scanner mockScanner;
-    private int numberAsked;
     private int languageSelection;
 
-    public Choices(InputReader inputReader, Scanner scanner) {
+    public TranslationToChoice(InputReader inputReader, Scanner scanner) {
         this.inputReader = inputReader != null ? inputReader : new InputReader();
         this.scanner = scanner != null ? scanner : new Scanner(System.in);
     }
 
-    public Choices() {
+    public TranslationToChoice() {
         this(new InputReader(), new Scanner(System.in));
-    }
-
-    public int getNumberAsked() {
-        return numberAsked;
-    }
-
-    public void setNumberAsked(int numberAsked) {
-        this.numberAsked = numberAsked;
     }
 
     public int getLanguageSelection() {
@@ -36,22 +27,6 @@ public class Choices {
     public void setLanguageSelection(int languageSelection) {
         this.languageSelection = languageSelection;
     }
-
-    /////////////////////////////////
-    public int numberChoice() {
-
-        logger.info("What is the number to translate ?");
-        String numberAsString = inputReader.readLine();
-
-        try {
-            numberAsked = Integer.parseInt(numberAsString);
-        } catch (NumberFormatException nfe) {
-            logger.severe("The numberAsked had to be numeric");
-            System.exit(0);// a modifier
-        }
-        return numberAsked;
-    }
-/////////////////////////////////
 
     public int translationChoice() {
 

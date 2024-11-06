@@ -1,6 +1,6 @@
 package io.eddvance.practice;
 
-import io.eddvance.practice.applicatif.Choices;
+import io.eddvance.practice.applicatif.TranslationToChoice;
 import io.eddvance.practice.applicatif.InputReader;
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
@@ -10,7 +10,7 @@ import static org.junit.jupiter.api.Assertions.assertEquals;
 
 class ChoiceTest {
 
-    private Choices choices;
+    private TranslationToChoice choices;
     //private Scanner mockScanner;
     private InputReader mockInputReader;
 
@@ -21,7 +21,7 @@ class ChoiceTest {
         mockInputReader = Mockito.mock(InputReader.class);
 
         // Initialisation de la classe principale avec un mock du scanner
-        choices = new Choices(mockInputReader);
+        choices = new TranslationToChoice(mockInputReader);
     }
 
     @Test
