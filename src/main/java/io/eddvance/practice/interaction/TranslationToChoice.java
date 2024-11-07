@@ -1,4 +1,4 @@
-package io.eddvance.practice.applicatif;
+package io.eddvance.practice.interaction;
 
 import java.util.Scanner;
 import java.util.logging.Logger;

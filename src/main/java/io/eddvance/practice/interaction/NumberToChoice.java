@@ -1,4 +1,4 @@
-package io.eddvance.practice.applicatif;
+package io.eddvance.practice.interaction;
 
 import java.util.Scanner;
 import java.util.logging.Logger;
@@ -27,7 +27,6 @@ public class NumberToChoice {
     public void setNumberAsked(int numberAsked) {
         this.numberAsked = numberAsked;
     }
-
     public int numberChoice() {
 
         logger.info("What is the number to translate ?");

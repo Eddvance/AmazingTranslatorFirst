@@ -1,7 +1,7 @@
 package io.eddvance.practice;
 
-import io.eddvance.practice.applicatif.TranslationToChoice;
-import io.eddvance.practice.applicatif.SearchAndReturn;
+import io.eddvance.practice.interaction.TranslationToChoice;
+import io.eddvance.practice.interaction.SearchAndReturn;
 import io.eddvance.practice.translations.FrenchTranslation;
 import io.eddvance.practice.translations.GermanTranslation;
 
@@ -24,10 +24,10 @@ public class Main {
             germanTranslation.germanTranslation();
 
             SearchAndReturn searchAndReturn = new SearchAndReturn();
-            TranslationToChoice choices = new TranslationToChoice();
+            TranslationToChoice translationToChoice = new TranslationToChoice();
 
-            int number = choices.numberChoice();
-            int languageSelection = choices.translationChoice();
+            int number = translationToChoice.translationChoice();
+            int languageSelection = translationToChoice.translationChoice();
 
             String translation = searchAndReturn.getTranslation(number, languageSelection);
             logger.fine(() -> "Your translation is : " + translation);
