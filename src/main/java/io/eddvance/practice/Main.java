@@ -2,8 +2,8 @@ package io.eddvance.practice;
 
 import io.eddvance.practice.interaction.TranslationToChoice;
 import io.eddvance.practice.interaction.SearchAndReturn;
-import io.eddvance.practice.translations.FrenchTranslation;
-import io.eddvance.practice.translations.GermanTranslation;
+import io.eddvance.practice.translation.FrenchTranslation;
+import io.eddvance.practice.translation.GermanTranslation;
 
 import java.util.Scanner;
 import java.util.logging.Logger;
