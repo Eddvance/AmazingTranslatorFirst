@@ -1,5 +1,6 @@
 package io.eddvance.practice;
 
+import io.eddvance.practice.interaction.NumberToChoice;
 import io.eddvance.practice.interaction.TranslationToChoice;
 import io.eddvance.practice.interaction.SearchAndReturn;
 import io.eddvance.practice.translation.FrenchTranslation;
@@ -25,16 +26,19 @@ public class Main {
 
             SearchAndReturn searchAndReturn = new SearchAndReturn();
             TranslationToChoice translationToChoice = new TranslationToChoice();
+            NumberToChoice numberToChoice = new NumberToChoice();
 
-            int number = translationToChoice.translationChoice();
+            int number = numberToChoice.numberChoice();
             int languageSelection = translationToChoice.translationChoice();
 
             String translation = searchAndReturn.getTranslation(number, languageSelection);
-            logger.fine(() -> "Your translation is : " + translation);
-            logger.info("Do you want to translate another number? (yes/no)");
+            logger.fine(() -> STR."Your translation is : \{translation}");
+            logger.info("Do you want to translate another number? (y/n)");
             restart = scanner.nextLine();
         }
-        while (restart.equalsIgnoreCase("yes"));
+        while (restart.equalsIgnoreCase("y"));
+       // if(restart==null)
+           // throw
         logger.severe("Au revoir - Auf Wiedersehen");
     }
 }
