@@ -19,19 +19,7 @@ public class Main {
         String restart;
 
         do {
-            FrenchTranslation frenchTranslation = new FrenchTranslation();
-            frenchTranslation.frenchTranslation();
-            GermanTranslation germanTranslation = new GermanTranslation();
-            germanTranslation.germanTranslation();
-
-            SearchAndReturn searchAndReturn = new SearchAndReturn();
-            TranslationToChoice translationToChoice = new TranslationToChoice();
-            NumberToChoice numberToChoice = new NumberToChoice();
-
-            int number = numberToChoice.numberChoice();
-            int languageSelection = translationToChoice.translationChoice();
-
-            String translation = searchAndReturn.getTranslation(number, languageSelection);
+            String translation = getString();
             logger.fine(() -> STR."Your translation is : \{translation}");
             logger.info("Do you want to translate another number? (y/n)");
             restart = scanner.nextLine();
@@ -40,5 +28,22 @@ public class Main {
        // if(restart==null)
            // throw
         logger.severe("Au revoir - Auf Wiedersehen");
+    }
+
+    private static String getString() {
+        FrenchTranslation frenchTranslation = new FrenchTranslation();
+        frenchTranslation.frenchTranslation();
+        GermanTranslation germanTranslation = new GermanTranslation();
+        germanTranslation.germanTranslation();
+
+        SearchAndReturn searchAndReturn = new SearchAndReturn();
+        TranslationToChoice translationToChoice = new TranslationToChoice();
+        NumberToChoice numberToChoice = new NumberToChoice();
+
+        int number = numberToChoice.numberChoice();
+        int languageSelection = translationToChoice.translationChoice();
+
+        String translation = searchAndReturn.getTranslation(number, languageSelection);
+        return translation;
     }
 }
