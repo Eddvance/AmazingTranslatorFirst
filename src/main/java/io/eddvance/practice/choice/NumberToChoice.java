@@ -34,30 +34,27 @@ public class NumberToChoice {
 
 
     public int numberChoice() {
-
-        logger.info("What is the number to translate ?");
-        String numberAskedAsString;
         while (true) {
-            logger.info("What is the number to translate?");
-            numberAskedAsString = inputReader.readLine();
-
-            if (numberAskedAsString == null || numberAskedAsString.isEmpty()) {
-                throw new NumberAskedCantNotBeEmpty("Input cannot be empty. Please try again.");
-            }
-
             try {
+                logger.info("What is the number to translate?");
+                String numberAskedAsString = inputReader.readLine();
+
+                if (numberAskedAsString == null || numberAskedAsString.isEmpty()) {
+                   logger.warning("Input cannot be empty. Please try again.");
+                    continue;
+                }
+
                 numberAskedInt = Integer.parseInt(numberAskedAsString);
 
                 if (numberAskedInt < 1 || numberAskedInt > 30) {
-                    logger.warning("The number must be between 1 and 30. Please try again.");
-                } else {
-                    break;
+                    logger.warning("Please enter a number between 1 and 30.");
+                    continue;
                 }
+                break;
             } catch (NumberFormatException e) {
                 logger.warning("Invalid input. Please enter a valid number.");
             }
         }
-
         return numberAskedInt;
     }
 }

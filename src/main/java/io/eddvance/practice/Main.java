@@ -18,6 +18,8 @@ public class Main {
         final Scanner scanner = new Scanner(System.in);
         String restart;
 
+
+
         do {
             String translation = getString();
             logger.fine(() -> STR."Your translation is : \{translation}");
@@ -25,8 +27,6 @@ public class Main {
             restart = scanner.nextLine();
         }
         while (restart.equalsIgnoreCase("y"));
-       // if(restart==null)
-           // throw
         logger.severe("Au revoir - Auf Wiedersehen");
     }
 
