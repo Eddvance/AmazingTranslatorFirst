@@ -1,9 +1,9 @@
-package io.eddvance.practice.interaction;
+package io.eddvance.practice.search;
 
 import java.util.logging.Logger;
 
-import static io.eddvance.practice.translation.FrenchTranslation.getFrenchTranslations;
-import static io.eddvance.practice.translation.GermanTranslation.getGermanTranslations;
+import static io.eddvance.practice.translation_directory.FrenchTranslation.getFrenchTranslations;
+import static io.eddvance.practice.translation_directory.GermanTranslation.getGermanTranslations;
 
 public class SearchAndReturn {
 

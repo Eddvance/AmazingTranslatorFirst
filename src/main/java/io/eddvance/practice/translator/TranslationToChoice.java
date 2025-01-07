@@ -1,4 +1,6 @@
-package io.eddvance.practice.interaction;
+package io.eddvance.practice.translator;
+
+import io.eddvance.practice.interaction.InputReader;
 
 import java.util.Scanner;
 import java.util.logging.Logger;

@@ -1,10 +1,10 @@
 package io.eddvance.practice;
 
-import io.eddvance.practice.interaction.NumberToChoice;
-import io.eddvance.practice.interaction.TranslationToChoice;
-import io.eddvance.practice.interaction.SearchAndReturn;
-import io.eddvance.practice.translation.FrenchTranslation;
-import io.eddvance.practice.translation.GermanTranslation;
+import io.eddvance.practice.choice.NumberToChoice;
+import io.eddvance.practice.translator.TranslationToChoice;
+import io.eddvance.practice.search.SearchAndReturn;
+import io.eddvance.practice.translation_directory.FrenchTranslation;
+import io.eddvance.practice.translation_directory.GermanTranslation;
 
 import java.util.Scanner;
 import java.util.logging.Logger;

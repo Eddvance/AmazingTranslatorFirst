@@ -1,5 +1,6 @@
 package io.eddvance.practice.interaction;
 
+import io.eddvance.practice.choice.NumberToChoice;
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
 import org.mockito.InjectMocks;
