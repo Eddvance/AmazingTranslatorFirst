@@ -1,16 +1,15 @@
 package io.eddvance.practice;
 
 import io.eddvance.practice.choice.NumberToChoice;
-import io.eddvance.practice.translator.TranslationToChoice;
 import io.eddvance.practice.search.SearchAndReturn;
 import io.eddvance.practice.translation_directory.FrenchTranslation;
 import io.eddvance.practice.translation_directory.GermanTranslation;
+import io.eddvance.practice.translator.TranslationToChoice;
 
 import java.util.Scanner;
 import java.util.logging.Logger;
 
-//TIP To <b>Run</b> code, press <shortcut actionId="Run"/> or
-// click the <icon src="AllIcons.Actions.Execute"/> icon in the gutter.
+
 public class Main {
     public static void main(String[] args) {
 
@@ -18,12 +17,10 @@ public class Main {
         final Scanner scanner = new Scanner(System.in);
         String restart;
 
-
-
         do {
             String translation = getString();
             logger.fine(() -> STR."Your translation is : \{translation}");
-            logger.info("Do you want to translate another number? (y/n)");
+            logger.info("Do you want to translate another number? (y)");
             restart = scanner.nextLine();
         }
         while (restart.equalsIgnoreCase("y"));
@@ -43,7 +40,6 @@ public class Main {
         int number = numberToChoice.numberChoice();
         int languageSelection = translationToChoice.translationChoice();
 
-        String translation = searchAndReturn.getTranslation(number, languageSelection);
-        return translation;
+        return searchAndReturn.getTranslation(number, languageSelection);
     }
 }
